@@ -139,7 +139,7 @@ if (user_input):
       with st.spinner("Running Agent"):
         try:
           code= run_agent(leader_agent, user_input)
-          st.html(code,width="stretch",unsafe_allow_transcript=True)
+          st.html(code,width="stretch",)
 
           if st.download_button(
                   label="Download PPT",
