@@ -94,7 +94,7 @@ if all(ALL_API):
     tools=[search_latest_info,
            #generative_image
            ])
-  leader_agent
+  #leader_agent
 else:
     st.info("give api key -key first to load agent")
 
