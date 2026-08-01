@@ -148,6 +148,9 @@ if (user_input):
                   mime="text/html"):
             st.success("ppt download successfully")
         except Exception as err:
-          st.error(str(err))
+          import traceback
+          st.exception(err)
+          traceback.print_exc()
+          # st.error(str(err))
 
     
