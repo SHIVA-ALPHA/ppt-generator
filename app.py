@@ -62,7 +62,7 @@ def generative_image(img_prompt, slide_no =1):
   url= f"https://image.pollinations.ai/{img_prompt}"
   import requests as r
   content = r.get(url).content
-  with open (f"ai_image_{slide_no}.jpeg", "wb") as f:
+  with open(f"ai_image_{slide_no}.jpeg", "wb") as f:
     f.write(content)
   return url
 
@@ -83,9 +83,9 @@ def run_agent(leader_agent, query):
 
   # prompt = agent_prompt(prompt)
 
-  response = leader_agent. invoke({'messages' : [ {'role':'user',
-                                                                'content': prompt} ]})
-  code = response['messages' ] [-1]. content [-1] ['text' ]
+  response = leader_agent.invoke({'messages':[{'role':'user',
+                                                            'content': prompt} ]})
+  code = response['messages'][-1].content[-1]['text']
   return code
 
 if all(ALL_API):
